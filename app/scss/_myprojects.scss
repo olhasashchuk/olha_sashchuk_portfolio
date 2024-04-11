@@ -1,0 +1,86 @@
+.myprojects {
+   padding: 20px 0 20px;
+
+   @media screen and (min-width: $breakpoint-md) {
+      padding: 50px 0 30px;
+   }
+   &__inner {
+      @include flex-center;
+      gap: 10px;
+   }
+
+   &__cards {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      gap: 30px;
+      padding-bottom: 30px;
+      @media screen and (min-width: $breakpoint-md) {
+         flex-flow: row wrap;
+      }
+   }
+
+   &__cards-inner {
+      flex: 1 1 100%;
+      background: $separator-color;
+      border-radius: 12px;;
+      overflow: hidden;
+
+      @media screen and (min-width: $breakpoint-md) {
+         flex: 1 1 46%;
+      };
+
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 1 1 30%;
+      }
+   }
+
+   &__cards-image {
+      display: block;
+      height: 200px;
+      background: $separator-color;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   &__cards-body {
+      padding: 30px;
+   }
+
+   &__cards-title {
+      margin-bottom: 15px;
+      transition: .3s ease;
+      a {
+         @include text-link;
+         font-size: 20px;
+         color: $text-color;
+         font-weight: 700;
+         line-height: 20px;
+      }
+
+      &:hover a {
+         color: $accent-color;
+      }
+   }
+
+   &__cards-tech {
+      color: $hover-color;
+      padding-bottom: 15px;
+      border-bottom: 4px solid $basic-white;
+      margin-bottom: 15px;
+   }
+
+   &__cards-text {
+      font-size: 14px;
+      line-height: 22px;
+   }
+}
+
+
+
+
+

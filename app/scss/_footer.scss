@@ -1,0 +1,72 @@
+.footer {
+	padding-bottom: 40px;
+	color: $basic-white;
+	background-color: $bg-footer;
+
+	&__body {
+		padding-top: 40px;
+		
+		@media screen and (min-width: $breakpoint-md) {
+			display: flex;
+			justify-content: space-around;
+			gap: 100px;
+      }
+		
+	}
+
+	&__inner {
+		padding-bottom: 20px;
+		li {
+			padding-bottom: 10px;
+		}
+	}
+
+	&__inner-title {
+		font-size: 16px;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	&__inner-link, &__link {
+      font-size: 14px;
+		color: $basic-white;
+      text-decoration: none;
+		text-transform: uppercase;
+      font-weight: 600;
+      transition: color .3s ease-in;
+ 
+      &:hover {
+      color: $hover-color;
+      }
+	}
+
+	&__phone {
+      display: block;
+      @include text-link;
+      font-weight: 700;
+   }
+
+   &__mail {
+      @include text-link;
+      font-weight: 700;
+      transition: .3s ease;
+      &:hover {
+         color: $accent-color;
+      }
+   }
+
+	&__address, &__phone, &__mail, &__link {
+		color: $basic-white;		
+		font-size: 14px;
+		line-height: 1.2;
+	}
+
+	&__mail {
+		&:hover {
+         color: $hover-color;
+      }
+	}
+
+}
+
+

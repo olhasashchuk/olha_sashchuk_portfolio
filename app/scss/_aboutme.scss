@@ -1,0 +1,53 @@
+.aboutme {
+   padding: 20px 0 20px;
+
+   @media screen and (min-width: $breakpoint-md) {
+      padding: 50px 0 30px;
+   }
+
+
+   &__inner {
+      @media screen and (min-width: $breakpoint-lg) {
+         display: flex;
+         gap: 40px;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+         gap: 80px;
+      }
+   }
+
+   &__inner-item {
+      padding-bottom: 20px;
+      @media screen and (min-width: $breakpoint-lg) {
+         padding-bottom: 0px;
+         flex: 1 1;
+      }
+   }
+
+   &__inner-item-img {
+      @media screen and (min-width: $breakpoint-lg) {
+         padding-bottom: 0px;
+         flex: 0 1 40%;
+      }
+
+      img {
+         max-height: 400px;
+         width: 100%;
+         border-radius: 12px;
+         object-fit: cover;
+      }
+   }
+
+
+
+   &__inner-title {
+      color: $text-color;
+      font-size: 20px;
+      font-weight: 700;
+      padding-bottom: 30px;
+      line-height: 1.4;
+   }
+
+   
+}

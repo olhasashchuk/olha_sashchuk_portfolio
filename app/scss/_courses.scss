@@ -1,0 +1,195 @@
+.courses {
+   padding-top: 10px;
+   margin: 10px 0 20px;
+
+   @media screen and (min-width: $breakpoint-md) {
+      margin: 30px 0 30px;
+   }
+
+
+   background-color: $separator-color;
+   &__slider {
+      position: relative;
+      padding: 20px 50px;
+   }
+
+   &__wrapper {
+      overflow: hidden;
+      padding: 0;
+   }
+
+   &__slide {
+      margin-bottom: 20px;
+      display: none;
+      opacity: 0;
+      animation: fadeInFromNone;
+
+      @keyframes fadeInFromNone {
+         from {
+            opacity: 0;
+            display: block;
+         }
+
+         to {
+            display: block;
+            opacity: 1;
+         }
+      }
+
+   }
+
+   &__image {
+      padding: 0 20px;
+
+      @media screen and (min-width: $breakpoint-xl) {
+         height: 500px;
+      }
+
+      @media screen and (min-width: $breakpoint-lg) {
+         height: 350px;
+      }
+   }
+
+   &__img {
+      border: 1px solid white;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   &__inner {
+      padding: 20px;
+      @media screen and (min-width: $breakpoint-lg) {
+         flex: 0 0 40%;
+      }
+   }
+
+   &__inner-title {
+      @include subtitle;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+   }
+
+   &__inner-name {
+      padding: 20px 0;
+      color: $text-color;
+      font-weight: 700;
+      @include text-link;
+
+      &:hover {
+         color: $hover-color;
+      }
+   }
+
+   &__inner-date {
+      color: $hover-color;
+      padding: 10px 0 20px 0;
+      font-size: 14px;
+      font-weight: 600;
+   }
+   
+   &__inner-descripcion {
+      h3 {
+         font-size: 18px;
+         font-weight: 600;
+         padding-bottom: 10px;
+      }
+
+      li {
+         font-size: 14px;
+         font-weight: 600;
+         line-height: 1.6;
+      }
+
+      li::before {
+         content: '';
+         display: inline-block;
+         height: 8px;
+         width: 8px;
+         border: 2px solid $hover-color;
+         background-color: $hover-color;
+         border-radius: 50%;
+         margin-right: 0.5rem;
+      }
+   }
+
+   &__slider-prev, &__slider-next {
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      transition: .3s ease;
+      flex: 0 0 42px;
+      cursor: pointer;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 13px;
+         left: 15px;
+         width: 14px;
+         height:14px;
+         border-bottom: 4px solid $accent-color;
+         border-left: 4px solid $accent-color;
+         transform: rotate(45deg);
+      }
+
+      &:hover::before {
+         border-color: $hover-color;
+      }
+
+      &:hover {
+         border-color: $hover-color;
+      }
+   }
+
+   &__slider-next {
+      &::before {
+         left: 10px;
+         transform: rotate(-135deg);
+      }
+   }
+
+   &__slider-prev {
+      top: 46%;
+      right: 96%;
+   }
+
+   &__slider-next {
+      top: 46%;
+      left: 96%;
+   }
+
+   &__slider-bullets {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+   }
+
+   &__slider-bullet  {
+      width: 40px;
+      border-bottom: 4px solid $accent-color;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+   }
+}
+
+.current {
+   opacity: 1;
+   display: block;
+   @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+   }
+}
+
+.active-bullet {
+   border-bottom: 4px solid $hover-color;
+}
+
+

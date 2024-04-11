@@ -1,0 +1,82 @@
+html {
+   height: 100%;
+}
+
+body {
+   font-family: 'OpenSans';
+   font-size: 16px;
+   font-weight: 400;
+   height: 100%;
+
+}
+
+.wrapper {
+   border-bottom: 1px solid $separator-color;
+   
+}
+
+.container {
+   padding: 0 30px;
+
+   @media screen and (min-width: $breakpoint-md) {
+      max-width: 708px;
+      margin: 0 auto;
+   }
+
+   @media screen and (min-width: $breakpoint-lg) {
+      max-width: 964px;
+   }
+
+   @media screen and (min-width: $breakpoint-xl) {
+      max-width: 1380px;
+   }
+
+   @media screen and (min-width: $breakpoint-xxl) {
+      max-width: 1660px;
+   }
+}
+
+main {
+   flex: 1;
+   padding-top: 30px;
+}
+
+.hidden {
+   width: 0;
+   height: 0;
+   position: absolute;
+   z-index: -1;
+}
+
+.text {
+   color: $text-color;
+   font-size: 14px;
+   line-height: 1.6;
+   padding-bottom: 5px;
+
+   @media screen and (min-width: $breakpoint-md) {
+      font-size: 16px;
+   }
+}
+
+.subtitle {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   padding-bottom: 30px;
+   
+   @media screen and (min-width: $breakpoint-md) {
+   padding-bottom: 60px;
+   }
+   
+   span {
+      margin-top: 10px;
+      width: 50px;
+      height: 2px;
+      background: $accent-color;
+   }
+}
+
+.subtitle-text {
+   @include subtitle;
+}

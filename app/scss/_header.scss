@@ -1,0 +1,204 @@
+.head {
+   min-height: 100vh;
+   position: relative;
+
+   &__container {
+      min-height: 100vh;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__video {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   &__title {
+      text-align: center;
+      font-family: 'BebasNeue';
+      font-size: 40px;
+      letter-spacing: 6px;
+      color: $basic-white;
+
+      @media screen and (min-width: $breakpoint-lg) {
+         font-size: 60px;
+      }
+   }
+
+   &__title-text {
+      font-weight: 600;
+      color: $basic-white;
+      text-align: center;
+      padding-top: 40px;
+      font-size: 18px;
+
+      @media screen and (min-width: $breakpoint-lg) {
+         font-size: 22px;
+      }
+   }
+
+   &__link {
+      padding-bottom: 40px;
+      color: $basic-white;
+      font-size: 11px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 4px;
+      transition: color .3s ease-in;
+ 
+      &:hover {
+      color: $accent-color;
+      }
+   }
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 24px 0;
+   gap: 20px;
+
+   &__box-burger {
+      width: 36px;
+      height: 32px;
+      cursor: pointer;
+      border-radius: 8px;
+      position: relative;
+      transition: .3s ease;
+      @media screen and (min-width: $breakpoint-md) {
+         display: none;
+      }
+
+      &::before, &::after, span {
+         position: absolute;
+         content: '';
+         top: 8px;
+         left: 6px;
+         right: 0;
+         width: 24px;
+         height: 2px;
+         background: $accent-color;      
+      }
+
+      &:hover::before, &:hover::after {
+         background: $hover-color;
+      }
+
+      &:hover span {
+         background: $hover-color;
+      }
+
+      &::after {
+         top:auto;
+         bottom: 8px;
+      }
+
+      span{
+         top: 50%;
+         transform: translateY(-50%);
+      }
+
+      &:hover {
+         background: $separator-color;
+      }
+   }
+
+   &__nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background: $basic-white;
+      padding: 12px;
+      transition: right .2s linear;
+      z-index: 2;
+      box-shadow: 0px 0px 20px 0px $separator-color;
+		&.active {
+			right: 0;
+		}
+
+      @media screen and (min-width: $breakpoint-md) {
+         position: static;
+			background: transparent;
+			padding: 0;
+			box-shadow: none;
+		}
+   }
+
+   &__nav-close {
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      margin: 0 0 20px auto;
+      position: relative;
+
+      @media screen and (min-width: $breakpoint-md) {
+			display: none;
+		}
+
+      &::before, &::after {
+         content: '';
+         position: absolute;
+         top: 10px;
+         left: 0;
+         width: 100%;
+         height: 2px;
+         background: $accent-color;
+         transform: rotate(45deg);
+      }
+
+      &::after {
+         transform: rotate(-45deg);
+      }
+   }
+
+   &__nav-list {
+      padding: 0 40px;
+
+      
+      @media screen and (min-width: $breakpoint-md) {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+      }
+      
+      @media screen and (min-width: $breakpoint-xl) {
+         gap: 40px;
+      }
+   }
+
+   &__nav-item {
+      text-align: center;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: $breakpoint-md) {
+			margin-bottom: 0;
+		}
+   }
+
+   &__nav-link {
+      display: block;
+      text-decoration: none;
+      color: $text-color;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+
+      @media screen and (min-width: $breakpoint-xl) {
+         font-size: 16px;
+      }
+      
+      &:hover {
+         color: $accent-color;
+      }
+   }
+}
+

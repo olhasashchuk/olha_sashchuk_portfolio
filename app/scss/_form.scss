@@ -1,0 +1,83 @@
+.form {
+  padding: 20px 0 50px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 50px 0 50px;
+  }
+  color: $text-color;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__body {
+    background-color: $separator-color;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  &__input {
+    width: 100%;
+    border: 1px solid $basic-white;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    background: $basic-white;
+    padding: 15px;
+    margin: 5px 0 15px 0;
+
+    &:focus {
+      outline: none;
+      border-color: $hover-color;
+    }
+
+    &::placeholder {
+      color: $text-color;
+    }
+  }
+
+  &__textarea {
+    min-height: 130px;
+    max-height: auto;
+    min-width: 100%;
+    resize: none;
+    margin-bottom: 15px;
+    font-family: 'OpenSans';
+  }
+
+  &__titlecontact {
+    padding: 15px 0;
+
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 18px 30px;
+    cursor: pointer;
+    background: $accent-color;
+    color: $basic-white;
+    font-family: 'OpenSans';
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 12px;
+    border-style: none;
+    box-shadow: 0px 0px 20px 0px rgba($bg-footer, 0.50);
+    transition: .3s ease;
+
+    &:hover {
+      background: $hover-color;
+    }
+
+    &:active {
+      background: $text-color;
+    }
+  }
+}

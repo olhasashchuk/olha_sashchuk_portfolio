@@ -1,0 +1,77 @@
+$accent-color: #00A4E5;
+$hover-color: #006CCF;
+$text-color: #48555B;
+$basic-white: #ffffff;
+$separator-color: #E6E6E6;
+$color: #000000;
+$bg-footer: rgb(65, 65, 65);
+
+// breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;
+
+// !MIXINS
+ 
+ 
+@mixin subtitle {
+   color: $text-color;
+   font-size: 20px;
+   font-weight: 700;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+}
+ 
+@mixin flex-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin text-link {
+   text-decoration: none;
+   cursor: pointer;
+}
+
+//fonts
+@font-face {
+   font-family: 'OpenSans';
+   src: url('../fonts/OpenSans-Regular.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'OpenSans';
+   src: url('../fonts/OpenSans-SemiBold.woff2') format('woff2');
+   font-weight: 600;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'OpenSans';
+   src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'OpenSans';
+   src: url('../fonts/OpenSans-ExtraBold.woff2') format('woff2');
+   font-weight: 800;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'BebasNeue';
+   src: url('../fonts/BebasNeue-Regular.woff2') format('woff2');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
